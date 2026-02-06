@@ -1,3 +1,6 @@
+## 0.5.0
+* Includes abandoned/banished packages to allow for security updates.
+
 ## 0.4.0
 
 * Adds support for simplestyle-spec. Thanks [Vincent Sels!](https://github.com/vincentsels)

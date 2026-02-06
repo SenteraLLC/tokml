@@ -1,4 +1,4 @@
-var strxml = require('strxml'),
+var strxml = require('./src/strxml.js'),
     tag = strxml.tag,
     encode = strxml.encode;
 

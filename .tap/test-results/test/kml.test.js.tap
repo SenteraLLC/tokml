@@ -1,0 +1,89 @@
+TAP version 14
+# Subtest: tokml
+    # Subtest: geometry
+        ok 1 - polygon
+        ok 2 - linestring
+        ok 3 - multilinestring
+        ok 4 - multipoint
+        ok 5 - multipolygon
+        ok 6 - geometrycollection
+        ok 7 - geometrycollection_nogeometries
+        1..7
+    ok 1 - geometry # time=4.368ms
+    
+    # Subtest: quirks
+        ok 1 - cdata
+        ok 2 - singlefeature
+        ok 3 - singlegeometry
+        ok 4 - unknown
+        ok 5 - nulldata
+        ok 6 - unknowngeom
+        ok 7 - unknowntype
+        ok 8 - notype
+        ok 9 - number_property
+        ok 10 - polygon_norings
+        ok 11 - multipolygon_none
+        ok 12 - multipoint_none
+        ok 13 - multilinestring_none
+        1..13
+    ok 2 - quirks # time=3.09ms
+    
+    # Subtest: name & description
+        ok 1 - name_desc
+        ok 2 - document_name_desc
+        1..2
+    ok 3 - name & description # time=0.579ms
+    
+    # Subtest: timestamp
+        ok 1 - timestamp
+        1..1
+    ok 4 - timestamp # time=0.353ms
+    
+    # Subtest: simplestyle spec
+        ok 1 - simplestyle_optionnotset
+        ok 2 - simplestyle_nostyle
+        ok 3 - simplestyle_multiple_same
+        ok 4 - simplestyle_multiple_different
+        ok 5 - simplestyle_point
+        ok 6 - simplestyle_point_nosymbol
+        ok 7 - simplestyle_point_defaults
+        ok 8 - simplestyle_linestring
+        ok 9 - simplestyle_linestring_defaults
+        ok 10 - simplestyle_multilinestring
+        ok 11 - simplestyle_polygon
+        ok 12 - simplestyle_polygon_defaults
+        ok 13 - simplestyle_multipolygon
+        ok 14 - simplestyle_polygon_multiple_same
+        ok 15 - simplestyle_polygon_multiple_different
+        ok 16 - simplestyle_geometrycollection
+        1..16
+    ok 5 - simplestyle spec # time=7.233ms
+    
+    # Subtest: simplestyle hex to kml color conversion
+        ok 1 - color \#ff5500 with opacity 1
+        ok 2 - color \#0000ff with opacity 1
+        ok 3 - color \#00ff00 with opacity 1
+        ok 4 - color \#000000 with opacity 1
+        ok 5 - color \#ffffff with opacity 1
+        ok 6 - color \#ff5500 with opacity 0.5
+        ok 7 - color \#ff5500 with opacity <undefined>
+        ok 8 - color \#ff5500 with opacity 0.01
+        ok 9 - color \#ff5500 with opacity 0.02
+        ok 10 - color \#ff5500 with opacity 0.99
+        ok 11 - color \#ff5500 with opacity 1
+        ok 12 - color \#f50 with opacity <undefined>
+        ok 13 - color f50 with opacity <undefined>
+        ok 14 - color null results in empty string
+        ok 15 - color  results in empty string
+        ok 16 - color aa with opacity <undefined>
+        1..16
+    ok 6 - simplestyle hex to kml color conversion # time=7.381ms
+    
+    # Subtest: fuzz
+        1..0
+    ok 7 - fuzz # time=53.033ms
+    
+    1..7
+ok 1 - tokml # time=94.836ms
+
+1..1
