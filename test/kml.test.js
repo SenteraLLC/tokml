@@ -1,7 +1,7 @@
 var test = require('tap').test,
     fs = require('fs'),
     glob = require('glob'),
-    fuzzer = require('fuzzer'),
+    fuzzer = require('./fuzzer'),
     path = require('path'),
     tokml = require('../');
 

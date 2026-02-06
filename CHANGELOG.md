@@ -1,5 +1,5 @@
 ## 0.5.0
-* Includes abandoned/banished packages to allow for security updates.
+* Includes abandoned/banished packages to allow for security updates
 
 ## 0.4.0
 
