@@ -1,24 +1,14 @@
-[![Build Status](https://travis-ci.org/mapbox/tokml.png)](https://travis-ci.org/mapbox/tokml) [![Coverage Status](https://coveralls.io/repos/mapbox/tokml/badge.png)](https://coveralls.io/r/mapbox/tokml)
-
 # tokml
+
 
 Convert [GeoJSON](http://geojson.org/) to [KML](https://developers.google.com/kml/documentation/).
 
 ## Usage
 
-with node/browserify
+with node
 
-    npm install --save tokml
+    npm install --save https://github.com/SenteraLLC/tokml.git
 
-otherwise:
-
-    wget https://raw.github.com/mapbox/tokml/master/tokml.js
-
-as a binary:
-
-    npm install -g tokml
-    tokml file.geojson > file.kml
-    tokml < file.geojson > file.kml
 
 ## Example
 
@@ -78,11 +68,7 @@ for the full document.
 
 ## Development
 
-Requires [node.js](http://nodejs.org/) and [browserify](https://github.com/substack/node-browserify):
-
-To build `tokml.js`:
-
-    make
+Requires [node.js](http://nodejs.org/) :
 
 To run tests:
 
