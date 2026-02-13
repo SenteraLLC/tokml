@@ -1,7 +1,7 @@
 var test = require('tap').test,
     fs = require('fs'),
     glob = require('glob'),
-    fuzzer = require('fuzzer'),
+    fuzzer = require('./fuzzer'),
     path = require('path'),
     tokml = require('../');
 
@@ -61,7 +61,7 @@ test('tokml', function(t) {
         tt.end();
     });
 
-    test('name & description', function(tt) {
+    t.test('name & description', function(tt) {
         geq(tt, 'name_desc');
         geq(tt, 'document_name_desc', {
             documentName: 'Document Title',
@@ -70,7 +70,7 @@ test('tokml', function(t) {
         tt.end();
     });
 
-    test('timestamp', function(tt) {
+    t.test('timestamp', function(tt) {
         geq(tt, 'timestamp', {
             name: 'name',
             description: 'description',
@@ -79,7 +79,7 @@ test('tokml', function(t) {
         tt.end();
     });
 
-    test('simplestyle spec', function(tt) {
+    t.test('simplestyle spec', function(tt) {
         var options = { simplestyle: true };
         
         geq(tt, 'simplestyle_optionnotset');
@@ -107,7 +107,7 @@ test('tokml', function(t) {
         tt.end();
     });
     
-    test('simplestyle hex to kml color conversion', function(tt) {
+    t.test('simplestyle hex to kml color conversion', function(tt) {
        testColor(tt, '#ff5500', 1, 'ff0055ff');
        testColor(tt, '#0000ff', 1, 'ffff0000');
        testColor(tt, '#00ff00', 1, 'ff00ff00');
@@ -136,7 +136,7 @@ test('tokml', function(t) {
        tt.end(); 
     });
 
-    test('fuzz', function(tt) {
+    t.test('fuzz', function(tt) {
         fuzzer.seed(0);
         glob.sync(__dirname + '/data/*.geojson').forEach(function(gj) {
             var generator = fuzzer.mutate.object(JSON.parse(fs.readFileSync(gj)));
@@ -151,6 +151,7 @@ test('tokml', function(t) {
         });
         tt.end();
     });
+    t.end();
 });
 
 function file(f) {
